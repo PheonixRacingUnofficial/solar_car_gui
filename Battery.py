@@ -1,11 +1,10 @@
 import tkinter as tk
 
-class Battery(tk.Tk):
-    def __init__(self, battery_level):
-        super().__init__()
+class Battery(tk.Frame):
+    def __init__(self, parent, battery_level):
+        super().__init__(parent)
 
         # Set window title and size
-        self.title("Battery Display")
         self.geometry("200x420")  # Adjusted height to accommodate extra space
         self.resizable(False, False)
 
