@@ -8,12 +8,11 @@ canvas_length = int(200 * scaling_factor)
 canvas_height = int(200 * scaling_factor)
 integrated = 20 # how many small lines are defined
 
-class Wattage(tk.Tk):
-    def __init__(self, wattage_level):
-        super().__init__()
+class Wattage(tk.Frame):
+    def __init__(self, parent, wattage_level):
+        super().__init__(parent)
 
         # Set window title and size
-        self.title("Wattage Display")
         self.geometry(f"{canvas_length}x{canvas_height}")  # Adjusted height to accommodate extra space
         self.resizable(True, True)
 
