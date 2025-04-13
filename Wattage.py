@@ -7,7 +7,7 @@ canvas_height = int(200 * scaling_factor)
 integrated = 20  # how many small lines are defined
 
 class Wattage(tk.Frame):
-    def __init__(self, parent, wattage_level):
+    def __init__(self, parent, wattage_level=100):
         super().__init__(parent)
 
         # Set the Frame's size and appearance
