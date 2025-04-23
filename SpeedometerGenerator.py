@@ -22,6 +22,10 @@ class Speedometer:
         self.canvas = tk.Canvas(master, width=canvas_length, height=canvas_height)
         self.canvas.pack()
 
+        # Create speed value label
+        self.speed_label = tk.Label(master, text=f"{self.speed:.1f} MPH", font=("Arial", font_size))
+        self.speed_label.pack()
+
         self.draw_speedometer()
 
     def create_line_with_length(self, x1, y1, length, angle):
@@ -63,6 +67,8 @@ class Speedometer:
         x = (canvas_length/2) + (80*scaling_factor) * math.cos(math.radians(angle))
         y = (canvas_height/2) + (80*scaling_factor) * math.sin(math.radians(angle))
         self.canvas.coords(self.needle, (canvas_length/2), (canvas_height/2), x, y)
+        # Update the speed label
+        self.speed_label.config(text=f"{self.speed:.1f} MPH")
 
     def moveto(self, param, param1):
         pass
