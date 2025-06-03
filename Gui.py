@@ -45,21 +45,21 @@ class Gui:
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10)
+        self.wattage_frame.pack(side="left", padx=10, pady=10)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level3   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10)
+        self.wattage_frame.pack(side="left", padx=10, pady=10)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level4   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10)
+        self.wattage_frame.pack(side="left", padx=10, pady=10)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level5                           
