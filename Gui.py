@@ -17,49 +17,49 @@ class Gui:
 
         # Wrap Battery in a Frame
         self.battery_frame = Frame(self.container)
-        self.battery_frame.pack(side="left", padx=10)
+        self.battery_frame.pack(side="left", padx=10, row=1)
         self.battery = Battery(self.battery_frame, battery_level)
         self.battery.pack() if hasattr(self.battery, "pack") else None
         self.batteryCharge = battery_level
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10)
+        self.wattage_frame.pack(side="left", padx=10, row=1)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level0
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10)
+        self.wattage_frame.pack(side="left", padx=10, row=1)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level1      
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10)
+        self.wattage_frame.pack(side="left", padx=10, row=1)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level2   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10, pady=10)
+        self.wattage_frame.pack(side="left", padx=10, row=2)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level3   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10, pady=10)
+        self.wattage_frame.pack(side="left", padx=10, row=2)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level4   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
-        self.wattage_frame.pack(side="left", padx=10, pady=10)
+        self.wattage_frame.pack(side="left", padx=10, row=2)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level5                           
