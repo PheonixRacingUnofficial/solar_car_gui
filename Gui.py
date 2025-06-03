@@ -1,5 +1,5 @@
-from src.solar_car_gui.Battery import Battery
-from src.solar_car_gui.Wattage import Wattage
+from src.Battery import Battery
+from src.Wattage import Wattage
 
 from tkinter import Tk, Frame
 import logging
