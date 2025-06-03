@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 class Gui:
-    def __init__(self, battery_level=0, wattage_level0=0, wattage_level1=0, wattage_level2=0, wattage_level3=0, wattage_level4=0, wattage_level5=0, wattage_level6=0, wattage_name0="", wattage_name1="", wattage_name2="", wattage_name3="", wattage_name4="", wattage_name5="", wattage_name6=""):
+    def __init__(self, battery_level=0, wattage_level0=0, wattage_level1=0, wattage_level2=0, wattage_level3=0, wattage_level4=0, wattage_level5=0, wattage_level6=0, wattage_name0="Test 1", wattage_name1="Test 2", wattage_name2="Test 3", wattage_name3="Test 4", wattage_name4="Test 5", wattage_name5="Test 6", wattage_name6="Test 7"):
         self.root = Tk()
         self.root.title("Solar Car Dashboard")
 
@@ -25,49 +25,49 @@ class Gui:
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
         self.wattage_frame.grid(row=0, column=1)
-        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name0="Test 1")
+        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name0)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level0
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
         self.wattage_frame.grid(row=0, column=2)
-        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name1="Test 2")
+        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name1)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level1      
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
         self.wattage_frame.grid(row=0, column=3)
-        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name2="Test 3")
+        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name2)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level2   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
         self.wattage_frame.grid(row=1, column=0)
-        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name3="Test 4")
+        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name3)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level3   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
         self.wattage_frame.grid(row=1, column=1)
-        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name4="Test 5")
+        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name4)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level4   
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
         self.wattage_frame.grid(row=1, column=2)
-        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name5="Test 6")
+        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name5)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level5
 
         # Wrap Wattage in a Frame
         self.wattage_frame = Frame(self.container)
         self.wattage_frame.grid(row=1, column=3)
-        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name6="Test 7")
+        self.wattage = Wattage(self.wattage_frame, wattage_level0, wattage_name6)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
         self.wattagePercent = wattage_level6                            
 
