@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 class Gui:
-    def __init__(self, battery_level=0, wattage_level0=0, wattage_level1=0, wattage_level2=0, wattage_level3=0, wattage_level4=0, wattage_level5=0):
+    def __init__(self, battery_level=0, wattage_level0=0, wattage_level1=0, wattage_level2=0, wattage_level3=0, wattage_level4=0, wattage_level5=0, wattage_level6=0):
         self.root = Tk()
         self.root.title("Solar Car Dashboard")
 
@@ -62,7 +62,14 @@ class Gui:
         self.wattage_frame.grid(row=1, column=2)
         self.wattage = Wattage(self.wattage_frame)
         self.wattage.pack() if hasattr(self.wattage, "pack") else None
-        self.wattagePercent = wattage_level5                           
+        self.wattagePercent = wattage_level5
+
+        # Wrap Wattage in a Frame
+        self.wattage_frame = Frame(self.container)
+        self.wattage_frame.grid(row=1, column=3)
+        self.wattage = Wattage(self.wattage_frame)
+        self.wattage.pack() if hasattr(self.wattage, "pack") else None
+        self.wattagePercent = wattage_level6                            
 
     def update_battery(self, battery_level):
         logger.info("Updated GUI Battery: " + str(battery_level))
@@ -98,3 +105,8 @@ class Gui:
         logger.info("Updated GUI Wattage: " + str(wattage_level5))
         self.wattage.update_wattage(wattage_level5)
         self.wattagePercent = wattage_level5
+
+    def update_wattage(self, wattage_level6):
+        logger.info("Updated GUI Wattage: " + str(wattage_level6))
+        self.wattage.update_wattage(wattage_level6)
+        self.wattagePercent = wattage_level6
