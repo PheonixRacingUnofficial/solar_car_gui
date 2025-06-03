@@ -7,7 +7,7 @@ canvas_height = int(200 * scaling_factor)
 integrated = 20  # how many small lines are defined
 
 class Wattage(tk.Frame):
-    def __init__(self, parent, wattage_level=100):
+    def __init__(self, parent, wattage_level=100, wattage_name="Test"):
         super().__init__(parent)
 
         # Set the Frame's size and appearance
@@ -50,6 +50,14 @@ class Wattage(tk.Frame):
         # Set initial wattage level
         self.level = wattage_level
         self.update_wattage(self.level)
+
+        # Store the wattage name
+        self.wattage_name = wattage_name
+        # Add a label at the bottom of the wattage display
+        self.wattage_name_text = self.canvas.create_text(
+            (18 / 36) * canvas_length, (33 / 36) * canvas_height,
+            text=self.wattage_name, font=("Arial", 16), fill="black")
+
 
     def update_wattage(self, level):
         # Clear any existing text
